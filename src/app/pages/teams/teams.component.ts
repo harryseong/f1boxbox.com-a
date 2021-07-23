@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {Constants} from '../../shared/constants/constants';
+import {BehaviorSubject} from 'rxjs';
+import {ErgastApiService} from '../../core/services/api/ergast/ergast-api.service';
 
 @Component({
   selector: 'app-teams',
@@ -16,11 +17,17 @@ import {Constants} from '../../shared/constants/constants';
   ]
 })
 export class TeamsComponent implements OnInit {
-  teams = Constants.TEAMS;
+  ergastConstructors$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
-  constructor() { }
+  constructor(private ergastApiService: ErgastApiService) { }
 
   ngOnInit(): void {
+    this.getCurrentConstructors(2021);
   }
 
+  getCurrentConstructors(season: number): void {
+    this.ergastApiService.getConstructors(season).toPromise()
+      .then((rsp: any) => this.ergastConstructors$.next(rsp.MRData.ConstructorTable.Constructors))
+      .catch(err => console.warn('There was an issue fetching current constructors.'));
+  }
 }

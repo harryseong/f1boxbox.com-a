@@ -10,6 +10,10 @@ export class ErgastApiService {
 
   constructor(private http: HttpClient) { }
 
+  getConstructors(season: number): Observable<any> {
+    return this.http.get<any>(`${environment.api.ergast.apiUrl}/${season}/constructors.json`);
+  }
+
   getDrivers(season: number): Observable<any> {
     return this.http.get<any>(`${environment.api.ergast.apiUrl}/${season}/drivers.json`);
   }

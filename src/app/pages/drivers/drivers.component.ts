@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {Constants} from '../../shared/constants/constants';
 import {ErgastApiService} from '../../core/services/api/ergast/ergast-api.service';
 import {BehaviorSubject, Observable} from 'rxjs';
 
@@ -18,7 +17,6 @@ import {BehaviorSubject, Observable} from 'rxjs';
   ]
 })
 export class DriversComponent implements OnInit {
-  drivers = Constants.DRIVERS;
   ergastDrivers$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(private ergastApiService: ErgastApiService) { }
@@ -32,5 +30,4 @@ export class DriversComponent implements OnInit {
       .then((rsp: any) => this.ergastDrivers$.next(rsp.MRData.DriverTable.Drivers))
       .catch(err => console.warn('There was an issue fetching current drivers.'));
   }
-
 }

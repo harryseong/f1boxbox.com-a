@@ -1,9 +1,12 @@
 <div [@contentAnimations]>
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="0.5em">
-    <mat-card *ngFor="let team of teams">
-      <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
-        <span class="team-name">{{team.name}}</span>
-      </mat-card-content>
-    </mat-card>
+  <div *ngIf="ergastConstructors$ | async as constructors;">
+    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em">
+      <mat-card *ngFor="let constructor of constructors">
+        <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
+          <span class="constructor-name">{{constructor.name}}</span>&nbsp;
+          <span class="constructor-nationality">({{constructor.nationality}})</span>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>
