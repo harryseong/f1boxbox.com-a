@@ -1,12 +1,10 @@
-<div [@contentAnimations]>
-  <div *ngIf="ergastConstructors$ | async as constructors;">
-    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em">
-      <mat-card *ngFor="let constructor of constructors">
-        <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
-          <span class="constructor-name">{{constructor.name}}</span>&nbsp;
-          <span class="constructor-nationality">({{constructor.nationality}})</span>
-        </mat-card-content>
-      </mat-card>
-    </div>
+<ng-container *ngIf="ergastConstructors$ | async as constructors;">
+  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em" [@contentAnimations]>
+    <mat-card *ngFor="let constructor of constructors">
+      <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
+        <span class="constructor-name">{{constructor.name}}</span>&nbsp;
+        <span class="constructor-nationality">({{constructor.nationality}})</span>
+      </mat-card-content>
+    </mat-card>
   </div>
-</div>
+</ng-container>

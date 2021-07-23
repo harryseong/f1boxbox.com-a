@@ -1,12 +1,10 @@
-<div [@contentAnimations]>
-  <div *ngIf="ergastDrivers$ | async as drivers;">
-    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em">
-      <mat-card *ngFor="let driver of drivers">
-        <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
-          <span class="driver-name">{{driver.givenName}} {{driver.familyName}}</span>
-          <span class="driver-number">#{{driver.permanentNumber}}</span>
-        </mat-card-content>
-      </mat-card>
-    </div>
+<ng-container *ngIf="ergastDrivers$ | async as drivers;">
+  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em" [@contentAnimations]>
+    <mat-card *ngFor="let driver of drivers">
+      <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
+        <span class="driver-name">{{driver.givenName}} {{driver.familyName}}</span>
+        <span class="driver-number">#{{driver.permanentNumber}}</span>
+      </mat-card-content>
+    </mat-card>
   </div>
-</div>
+</ng-container>
