@@ -1,3 +1,8 @@
 export const environment = {
-  production: true
+  production: true,
+  api: {
+    ergast: {
+      apiUrl: 'https://ergast.com/api/f1'
+    }
+  }
 };
