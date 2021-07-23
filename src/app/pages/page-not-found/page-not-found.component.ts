@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {Constants} from '../../shared/constants/constants';
 
 @Component({
-  selector: 'app-drivers',
-  templateUrl: './drivers.component.html',
-  styleUrls: ['./drivers.component.scss'],
+  selector: 'app-page-not-found',
+  templateUrl: './page-not-found.component.html',
+  styleUrls: ['./page-not-found.component.scss'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [
@@ -15,8 +14,7 @@ import {Constants} from '../../shared/constants/constants';
     ])
   ]
 })
-export class DriversComponent implements OnInit {
-  drivers = Constants.DRIVERS;
+export class PageNotFoundComponent implements OnInit {
 
   constructor() { }
 
