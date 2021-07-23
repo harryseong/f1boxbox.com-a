@@ -2,7 +2,7 @@
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="0.5em">
     <mat-card *ngFor="let driver of drivers">
       <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
-        <span class="driver-name">{{driver.name}}</span>
+        <span class="driver-name">{{driver.firstName}} {{driver.lastName}}</span>
         <span class="driver-number">#{{driver.number}}</span>
       </mat-card-content>
     </mat-card>

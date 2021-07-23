@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {Constants} from '../../shared/constants/constants';
 
 @Component({
   selector: 'app-teams',
@@ -15,6 +16,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class TeamsComponent implements OnInit {
+  teams = Constants.TEAMS;
 
   constructor() { }
 

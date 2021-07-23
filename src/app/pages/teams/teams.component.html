@@ -1,3 +1,9 @@
 <div [@contentAnimations]>
-  <p>teams works!</p>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+    <mat-card *ngFor="let team of teams">
+      <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
+        <span class="team-name">{{team.name}}</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
