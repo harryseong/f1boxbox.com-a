@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { StandingsComponent } from './pages/standings/standings.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { DriversComponent } from './pages/drivers/drivers.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DriversComponent } from './pages/drivers/drivers.component';
     PlaceHolderComponent,
     StandingsComponent,
     TeamsComponent,
-    DriversComponent
+    DriversComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
