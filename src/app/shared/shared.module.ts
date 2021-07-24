@@ -6,12 +6,14 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
 import {MaterialModule} from './modules/material/material.module';
 import {RouterModule} from '@angular/router';
 import {FlexModule} from '@angular/flex-layout';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
-    PlaceholderComponent
+    PlaceholderComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import {FlexModule} from '@angular/flex-layout';
     NavbarComponent,
     FooterComponent,
     PlaceholderComponent,
+    LoadingComponent,
     MaterialModule
   ]
 })

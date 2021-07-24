@@ -1,4 +1,4 @@
-<ng-container *ngIf="ergastConstructors$ | async as constructors;">
+<ng-container *ngIf="ergastConstructors$ | async as constructors; else appLoading">
   <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em" [@contentAnimations]>
     <mat-card *ngFor="let constructor of constructors">
       <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
@@ -8,3 +8,8 @@
     </mat-card>
   </div>
 </ng-container>
+
+<ng-template #appLoading>
+  <app-loading></app-loading>
+</ng-template>
+

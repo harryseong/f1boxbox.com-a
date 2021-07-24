@@ -1,4 +1,4 @@
-<ng-container *ngIf="ergastDrivers$ | async as drivers;">
+<ng-container *ngIf="ergastDrivers$ | async as drivers; else appLoading">
   <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em" [@contentAnimations]>
     <mat-card *ngFor="let driver of drivers">
       <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
@@ -8,3 +8,7 @@
     </mat-card>
   </div>
 </ng-container>
+
+<ng-template #appLoading>
+  <app-loading></app-loading>
+</ng-template>
