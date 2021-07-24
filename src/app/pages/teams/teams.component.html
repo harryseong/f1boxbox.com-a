@@ -1,5 +1,5 @@
 <ng-container *ngIf="ergastConstructors$ | async as constructors; else appLoading">
-  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em" [@contentAnimations]>
+  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.5em" [@contentAnimations]>
     <mat-card *ngFor="let constructor of constructors">
       <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
         <span class="constructor-name">{{constructor.name}}</span>&nbsp;

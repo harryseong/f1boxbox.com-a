@@ -1,9 +1,12 @@
 <ng-container *ngIf="ergastDrivers$ | async as drivers; else appLoading">
-  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="0.2em" [@contentAnimations]>
-    <mat-card *ngFor="let driver of drivers">
-      <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
-        <span class="driver-name">{{driver.givenName}} {{driver.familyName}}</span>
-        <span class="driver-number">#{{driver.permanentNumber}}</span>
+  <div fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="0.5em" [@contentAnimations]>
+    <mat-card *ngFor="let driver of drivers" class="driver-card">
+      <mat-card-content fxLayout="row" fxLayoutAlign="space-between center">
+        <img class="driver-image" [src]="'assets/images/drivers/headshots/' + (driver.code|lowercase) + '.png'" [alt]="driver.code">
+        <div class="driver-name">{{driver.givenName}} {{driver.familyName}}</div>
+        <div class="drive-dob">DOB: {{driver.dateOfBirth}}</div>
+        <div class="drive-nationality">{{driver.nationality}}</div>
+        <div class="driver-number">#{{driver.permanentNumber}}</div>
       </mat-card-content>
     </mat-card>
   </div>
