@@ -1,42 +1,34 @@
-import {Team} from '../interfaces/team';
-import {Driver} from '../interfaces/driver';
-
 export class Constants {
-  static DRIVERS: Driver[] = [
-    {uuid: 'daaaa1', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa2', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa3', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa4', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa5', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa6', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa7', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa8', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa9', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaa0', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaaa', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaab', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaac', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaad', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaae', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaaf', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaag', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaah', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaai', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-    {uuid: 'daaaaj', firstName: 'Max', lastName: 'Verstappen', country: 'Netherlands', dob: '03/09/1997', placeOfBirth: 'Hasselt, Belgium', number: 55, team: 'Red Bull Racing', code: 'ver'},
-  ];
-  static COUNTRIES = [
-
-  ];
-  static TEAMS: Team[] = [
-    {uuid: 'taaaaa', name: 'Alfa Romeo Racing', fullName: 'Alfa Romeo Racing ORLEN', code: 'alpha-romeo'},
-    {uuid: 'taaaab', name: 'AlphaTauri', fullName: 'Scuderia AlphaTauri Honda', code: 'alphatauri'},
-    {uuid: 'taaaac', name: 'Alpine', fullName: 'Alpine F1 Team', code: 'alpine'},
-    {uuid: 'taaaad', name: 'Aston Martin', fullName: 'Aston Martin Cognizant F1 Team', code: 'aston-martin'},
-    {uuid: 'taaaae', name: 'Ferrari', fullName: 'Scuderia Ferrari Mission Winnow', code: 'ferrari'},
-    {uuid: 'taaaaf', name: 'Haas F1 Team', fullName: 'Uralkali Haas F1 Team', code: 'haas'},
-    {uuid: 'taaaag', name: 'McLaren', fullName: 'McLaren F1 Team', code: 'mclaren'},
-    {uuid: 'taaaah', name: 'Mercedes', fullName: 'Mercedes-AMG Petronas F1 Team', code: 'mercedes'},
-    {uuid: 'taaaai', name: 'Red Bull Racing', fullName: 'Red Bull Racing Honda', code: 'red-bull'},
-    {uuid: 'taaaaj', name: 'Williams', fullName: 'Williams Racing', code: 'williams'}
+  static COUNTRIES: any[] = [
+    {name: 'Australia', nationality: 'Australian', flagIconFile: '143-australia.svg'},
+    {name: 'Austria', nationality: 'Austrian', flagIconFile: '072-austria.svg'},
+    {name: 'Azerbaijan', nationality: 'Azerbaijani', flagIconFile: '137-azerbaijan.svg'},
+    {name: 'Bahrain', nationality: 'Bahraini', flagIconFile: '146-bahrain.svg'},
+    {name: 'Belgium', nationality: 'Belgian', flagIconFile: '209-belgium.svg'},
+    {name: 'Brazil', nationality: 'Brazilian', flagIconFile: '022-brazil.svg'},
+    {name: 'Canada', nationality: 'Canadian', flagIconFile: '066-canada.svg'},
+    {name: 'Denmark', nationality: 'Danish', flagIconFile: '191-denmark.svg'},
+    {name: 'Finland', nationality: 'Finnish', flagIconFile: '211-finland.svg'},
+    {name: 'France', nationality: 'French', flagIconFile: '197-france.svg'},
+    {name: 'Germany', nationality: 'German', flagIconFile: '208-germany.svg'},
+    {name: 'Hungary', nationality: 'Hungarian', flagIconFile: '210-hungary.svg'},
+    {name: 'Italy', nationality: 'Italian', flagIconFile: '263-italy.svg'},
+    {name: 'Japan', nationality: 'Japanese', flagIconFile: '241-japan.svg'},
+    {name: 'Malaysia', nationality: 'Malaysian', flagIconFile: '207-malaysia.svg'},
+    {name: 'Mexico', nationality: 'Mexican', flagIconFile: '033-mexico.svg'},
+    {name: 'Monaco', nationality: 'Monegasque', flagIconFile: '220-monaco.svg'},
+    {name: 'Netherlands', nationality: 'Dutch', flagIconFile: '077-netherlands.svg'},
+    {name: 'Portugal', nationality: 'Portuguese', flagIconFile: '098-portugal.svg'},
+    {name: 'Qatar', nationality: 'Qatari', flagIconFile: '244-qatar.svg'},
+    {name: 'Russia', nationality: 'Russian', flagIconFile: '044-russia.svg'},
+    {name: 'Saudi Arabia', nationality: 'Saudi', flagIconFile: '204-saudi arabia.svg'},
+    {name: 'Singapore', nationality: 'Singaporean', flagIconFile: '132-singapore.svg'},
+    {name: 'Spain', nationality: 'Spanish', flagIconFile: '230-spain.svg'},
+    {name: 'Thailand', nationality: 'Thai', flagIconFile: '088-thailand.svg'},
+    {name: 'Turkey', nationality: 'Turkosh', flagIconFile: '154-turkey.svg'},
+    {name: 'United Arab Emirates', nationality: 'Emirati', flagIconFile: '195-united arab emirates.svg'},
+    {name: 'United Kingdom', nationality: 'British', flagIconFile: '110-united kingdom.svg'},
+    {name: 'United States', nationality: 'American', flagIconFile: '186-united states.svg'},
+    {name: 'Vietnam', nationality: 'Vietnamese', flagIconFile: '109-vietnam.svg'}
   ];
 }

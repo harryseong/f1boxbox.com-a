@@ -7,13 +7,15 @@ import {MaterialModule} from './modules/material/material.module';
 import {RouterModule} from '@angular/router';
 import {FlexModule} from '@angular/flex-layout';
 import { LoadingComponent } from './components/loading/loading.component';
+import { NationalityPipe } from './pipes/nationality/nationality.pipe';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
     PlaceholderComponent,
-    LoadingComponent
+    LoadingComponent,
+    NationalityPipe
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     FooterComponent,
     PlaceholderComponent,
     LoadingComponent,
-    MaterialModule
+    MaterialModule,
+    NationalityPipe
   ]
 })
 export class SharedModule { }

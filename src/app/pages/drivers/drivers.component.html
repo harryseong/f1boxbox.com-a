@@ -5,7 +5,9 @@
         <img class="driver-image" [src]="'assets/images/drivers/headshots/' + (driver.code|lowercase) + '.png'" [alt]="driver.code">
         <div class="driver-name">{{driver.givenName}} {{driver.familyName}}</div>
         <div class="drive-dob">DOB: {{driver.dateOfBirth}}</div>
-        <div class="drive-nationality">{{driver.nationality}}</div>
+        <div class="drive-nationality">
+          <img class="flag-icon" src="assets/images/flags/{{driver.nationality | nationality : 'nationality' : 'flagIconFile'}}" alt="{{driver.nationality}} flag icon">
+        </div>
         <div class="driver-number">#{{driver.permanentNumber}}</div>
       </mat-card-content>
     </mat-card>
