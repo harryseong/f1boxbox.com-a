@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   api: {
     ergast: {
-      apiUrl: 'https://ergast.com/api/f1/'
+      apiUrl: 'https://ergast.com/api/f1'
     }
   },
   mapbox: {
