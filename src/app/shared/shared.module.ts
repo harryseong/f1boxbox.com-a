@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import {FlexModule} from '@angular/flex-layout';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NationalityPipe } from './pipes/nationality/nationality.pipe';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NationalityPipe } from './pipes/nationality/nationality.pipe';
     FooterComponent,
     PlaceholderComponent,
     LoadingComponent,
-    NationalityPipe
+    NationalityPipe,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { NationalityPipe } from './pipes/nationality/nationality.pipe';
     PlaceholderComponent,
     LoadingComponent,
     MaterialModule,
-    NationalityPipe
+    NationalityPipe,
+    MapComponent
   ]
 })
 export class SharedModule { }

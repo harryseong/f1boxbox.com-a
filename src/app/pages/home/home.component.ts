@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,6 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
